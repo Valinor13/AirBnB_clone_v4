@@ -127,6 +127,16 @@ TestBaseModel class:
 * `def test_user_class_docstring(self)` - Test for the User class docstring
 
 
+
+## Usage
+* Run a test server through the command line
+* Open a second terminal window and run the database
+* Access dynamic information about the HBNB classes through web interface html
+* Request changes to the database from the client side html
+
+
+
+
 ## Examples of use
 ```
 vagrantAirBnB_clone$./console.py
@@ -150,6 +160,37 @@ EOF  all  create  destroy  help  quit  show  update
 (hbnb) quit
 ```
 
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../static/styles/4-common.css?{{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-header.css?{{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/3-footer.css?{{ cache_id }}">
+    <link rel="stylesheet" type="text/css" href="../static/styles/6-filters.css?{{ cache_id }}">
+    <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
+    <link rel="icon" href="../static/images/icon.png?{{ cache_id }}" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="static/scripts/1-hbnb.js?{{ cache_id }}" defer<script>
+    <title>HBnB</title>
+  </head>
+```
+
+```
+<div class="amenities">
+          <h3>Amenities</h3>
+          <h4>&nbsp;</h4>
+          <div class="popover">
+            <ul>
+              {% for amenity in amenities %}
+              <li><input type="checkbox" style="margin-right:10px" data-id=":amenity_id" data-name=":amenity_name">{{ amenity.name }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+```
+
 ## Bugs
 No known bugs at this time. 
 
@@ -157,8 +198,12 @@ No known bugs at this time.
 Alexa Orrico - [Github](https://github.com/alexaorrico) / [Twitter](https://twitter.com/alexa_orrico)  
 Jennifer Huang - [Github](https://github.com/jhuang10123) / [Twitter](https://twitter.com/earthtojhuang)  
 Jhoan Zamora - [Github](https://github.com/jzamora5) / [Twitter](https://twitter.com/JhoanZamora10)  
-David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)
-
-Second part of Airbnb: Joann Vuong
+David Ovalle - [Github](https://github.com/Nukemenonai) / [Twitter](https://twitter.com/disartDave)  
+Jay Calhoun - [Github](https://github.com/Valinor13) / [E-mail](jwcalhoun2@gmail.com)  
+```
+Second part of Airbnb: Joann Vuong  
+Third part of Airbnb: David Ovalle  
+Fourth part of Airbnb: Jay Calhoun
+```
 ## License
 Public Domain. No copy write protection. 
