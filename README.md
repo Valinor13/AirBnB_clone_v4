@@ -172,7 +172,7 @@ EOF  all  create  destroy  help  quit  show  update
     <link type="text/css" rel="stylesheet" href="../static/styles/8-places.css?{{ cache_id }}">
     <link rel="icon" href="../static/images/icon.png?{{ cache_id }}" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="static/scripts/1-hbnb.js?{{ cache_id }}" defer<script>
+    <script src="static/scripts/1-hbnb.js?{{ cache_id }}" defer></script>
     <title>HBnB</title>
   </head>
 ```
@@ -184,7 +184,7 @@ EOF  all  create  destroy  help  quit  show  update
           <div class="popover">
             <ul>
               {% for amenity in amenities %}
-              <li><input type="checkbox" style="margin-right:10px" data-id=":amenity_id" data-name=":amenity_name">{{ amenity.name }}</li>
+              <li><input type="checkbox" style="margin-right:10px" data-id=":amenity_id" data-name=":amenity_name"></input>{{ amenity.name }}</li>
               {% endfor %}
             </ul>
           </div>
